@@ -6,7 +6,7 @@ def home(request):
     list_data=Task_list.objects.all()
     list_custem=Custem.objects.all()
     list_tags=Tags.objects.all()
-    return render(request,'Home..html',{'data':obj,'list':list_data,'custem':list_custem , 'tags':list_tags})
+    return render(request,'index.html',{'data':obj,'list':list_data,'custem':list_custem , 'tags':list_tags})
 
 def load_task(request):
     return render(request,'Task.html')
